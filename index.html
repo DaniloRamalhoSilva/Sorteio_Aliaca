@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="sorteio" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio Ação entre amigos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
+    <link rel="stylesheet" href="imagen.css">
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app.js"></script> 
+</head>
+
+<body id="fundo" ng-controller="sorteioControl">
+    <div class="box" >
+        <div>
+            <tr> 
+                <h2 class="titulo"> 3º Prêmio:</h2>
+                <h3 class="texto">{{terceiro.cupom +" - "+ terceiro.nome}} </h3>
+                <h2 class="titulo"> 2º Prêmio: </h2 >
+                <h3 class="texto"> {{segundo.cupom +" - "+ segundo.nome}} </h3>
+                <h2 class="titulo"> 1º Prêmio:</h2 >   
+                <h3 class="texto"> {{primeiro.cupom +" - "+ primeiro.nome}} </h3>   
+            </tr>              
+        </div>  
+        <div>        
+            <button class="btn btn-primary btn-block" ng-click="sortear()" > {{contador}}</button>
+            <h1 class="titulo2" ng-show="mostrar">Parabéns:</h1> 
+            <h1 class="texto2" ng-show="mostrar">{{ ganhador.cupom +" - "+ ganhador.nome }}</h1>
+            <h1 class="texto3" ng-show="esconder">{{ fim }}</h1>        
+         </div>                          
+    </div>  
+           
+</body>
+</html>
