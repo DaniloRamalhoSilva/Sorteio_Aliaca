@@ -1,0 +1,38 @@
+{
+  "name": "sorteio_alianca",
+  "version": "1.0.0",
+  "description": "\"Projeto para sorteio\"",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaniloRamalhoSilva/Sorteio_Aliaca.git"
+  },
+  "keywords": [
+    "\"sorteio\"",
+    "\"alianca\"",
+    "projeto\"\u001b"
+  ],
+  "author": "\"Danilo Ramalho Silva\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaniloRamalhoSilva/Sorteio_Aliaca/issues"
+  },
+  "homepage": "https://github.com/DaniloRamalhoSilva/Sorteio_Aliaca#readme",
+  "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "grunt-cli": "^1.3.2"
+  },
+  "dependencies": {
+    "angular": "^1.8.2",
+    "grunt": "^1.3.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-connect": "^3.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-uglify": "^5.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}
