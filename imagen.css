@@ -17,52 +17,53 @@
 
   .box{
     display: flex;            
-    margin-top: 130px;
+    margin-top: 10%;
     
 }
 .box div{            
-    width:500px;
-    left: 300px;
+    width:40%;
+    left: 30%;
 }
 .btn{
-    width: 350px;
-    margin-top: 150px;
-    margin-block-end: 20px;
-    margin-left: 100px;
+    width: 50%;
+    margin-top: 30%;
+    margin-block-end: 3%;
+    margin-left: 25%;
     
 }
 .titulo{
-    width: 200px;
-    margin-top: 30px;
+    width: 100%;
+    margin-top: 5%;
     margin-left: 0%;
     color: red;
     font-weight: bold;
     text-align: left;
 }
 .titulo2{
-    width: 460px;            
-    margin-left: 50px;
+    width: 100%;         
+    margin-left: 0%;
     font-weight: bold;
     text-align: center;
     color: red;
 }
 .texto{
-    width: 460px;            
+    width: 80%;            
     margin-left: 0%;
     font-weight: bold;
     text-align: left;
     
 }
 .texto2{
-    width: 460px;            
-    margin-left: 80px;
+    width: 100%;            
+    margin-left: 15%;
     font-weight: bold;
     text-align: left;
     
 }
 .texto3{
-    width: 460px;            
-    margin-left: 40px;
+    width: 100%;            
+    margin-left: 0%;
+    margin-top: 10%;
     font-weight: bold;
     text-align: center;
     
