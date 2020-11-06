@@ -25,6 +25,8 @@ function configGrunt(grunt) {
                 src: [
                     'angular/angular.js',
                     'angular-route/angular-route.js',
+                    'xlsx.full.min.js',
+                    'jquery.min.js'
                 ],
                 dest: vendorDir
             }
