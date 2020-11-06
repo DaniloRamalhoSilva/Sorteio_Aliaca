@@ -7,26 +7,39 @@
           /* ***************    INIT VARIÁVEIS    *********************************** */
            $scope.contador = 'Sortear 3º Prêmio'
            var conta = 0;
+           var participantes = [];
+          
 
           /* ***************    FUNÇÕES EXECUTADAS NA VIEW (HMTL)    **************** */  
             
             
             $scope.participantes = [
-                {cupom: '5089', nome: 'Danilo Ramalho Silva de Araujo Dantas'},
-                {cupom: '5048', nome: 'Raul Nascimento'},
-                {cupom: '5135', nome: 'Lucas Pereira'},
-                {cupom: '5545', nome: 'Amanda Carvalho Cariri'},
-                {cupom: '5243', nome: 'Vlamir Lucas Pereira'},
-                {cupom: '5014', nome: 'Tamires Regina de souza Oliveira'},
-                {cupom: '4027', nome: 'Matheus Dantas Silva'},
-                {cupom: '1520', nome: 'Rafael de Oliveira Neto'},
-                {cupom: '1824', nome: 'Catarina Silvestre Macedo'}
-                
+                                
             ];
+
+            $scope.uploadExel = function(){
+
+                var myFile = document.getElementById('file');
+                var input = myFile;
+                var reader = new FileReader();
+                reader.onload = function(){
+                    var fileData = reader.result;
+                    var workbook = XLSX.read(fileData, {type: 'binary'});
+                    workbook.SheetNames.forEach(function(sheetName){
+                        var rowObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+                        $scope.participantes = rowObject;                        
+                    });
+                    
+                    
+                };
+
+                reader.readAsBinaryString(input.files[0]);
+
+            };
 
            
             $scope.sortear = function () {
-                                        
+                                
                 $scope.mostrar = true;
                 $scope.ganhador = $scope.participantes[Math.floor(Math.random()*$scope.participantes.length)];
                 
