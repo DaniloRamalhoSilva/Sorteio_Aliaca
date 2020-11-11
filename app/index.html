@@ -22,19 +22,18 @@
     <div id="fundo2" ng-hide="pg">          
         <input class="btnLista btn-primary btn-block"  type="file" id="file">
         <button class="btnLista btn-primary btn-block"  value="submit" ng-click="uploadExel()">Carregar Arquiva</button> 
-        <button class="btnLista btn-primary btn-block"  value="submit" ng-show="aki" ng-click="pagina()">Sortiar</button>
+        <button class="btnLista btn-primary btn-block"  value="submit" ng-show="aki" ng-click="pagina()">Tela de Sorteio</button>
              
-        <table  id="table" class="table">
-            <tr>
+        <table  id="myTable" class="table">
+            <tr class="table-active">
                 <th>Cupom</th>        
                 <th>Nome</th>                
-            </tr>
-            <tr ng-repeat="participante in participantes">
-                <td>{{participante.cupom}}</td>
-                <td>{{participante.nome}}</td>
-            </tr>
+            </tr>            
+            <tbody>
+
+            </tbody>
         </table>
-                        
+        <tr></tr>                
     </div>
        
     <div id="fundo" ng-show="pg">
@@ -52,7 +51,7 @@
             </div>  
             
             <div>        
-                <button class="btn btn-primary btn-block" ng-click="sortear()" > {{contador}}</button>
+                <button id="musica" class="btn btn-primary btn-block" ng-click="sortear()" > {{contador}}</button>
                 <h1 class="titulo2" ng-show="mostrar">Parabéns:</h1> 
                 <h1 class="texto2" ng-show="mostrar">{{ ganhador.cupom +" - "+ ganhador.nome }}</h1>
                 <h1 class="texto3" ng-show="esconder">{{ fim }}</h1>                      
