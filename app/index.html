@@ -8,50 +8,60 @@
     
     <script src="vendor/angular/angular.js"></script>
     <script src="app.js"></script>
-
+    
     <link rel="stylesheet" href="imagen.css">
 
     <script type="text/javascript" src="vendor/jquery.min.js"></script>
     <script type="text/javascript" src="vendor/xlsx.full.min.js"></script>
          
-    
-
-    <style type="text/css">
-        table, th, td{
-            border: 1px solid black;
-        }
-
-    </style>
+       
 </head>
 
-<body id="fundo" ng-controller="sorteioControl">
-     
-    <div class="box" >
-        <div>
-            <tr> 
-                <h2 class="titulo"> 3º Prêmio:</h2>
-                <h3 class="texto">{{terceiro.cupom +" - "+ terceiro.nome}} </h3>
-                <h2 class="titulo"> 2º Prêmio: </h2 >
-                <h3 class="texto"> {{segundo.cupom +" - "+ segundo.nome}} </h3>
-                <h2 class="titulo"> 1º Prêmio:</h2 >   
-                <h3 class="texto"> {{primeiro.cupom +" - "+ primeiro.nome}} </h3>   
-            </tr>              
-        </div>  
-        
-        <div>        
-            <button class="btn btn-primary btn-block" ng-click="sortear()" > {{contador}}</button>
-            <h1 class="titulo2" ng-show="mostrar">Parabéns:</h1> 
-            <h1 class="texto2" ng-show="mostrar">{{ ganhador.cupom +" - "+ ganhador.nome }}</h1>
-            <h1 class="texto3" ng-show="esconder">{{ fim }}</h1>        
-         </div>   
-                 
-         
-    </div> 
-    <div>
-        <input type="file" id="file">
-        <button type="submit" value="submit" ng-click="uploadExel()">Carregar Arquiva</button>       
+<body  ng-controller="sorteioControl">
+
+    <div id="fundo2" ng-hide="pg">          
+        <input class="btnLista btn-primary btn-block"  type="file" id="file">
+        <button class="btnLista btn-primary btn-block"  value="submit" ng-click="uploadExel()">Carregar Arquiva</button> 
+        <button class="btnLista btn-primary btn-block"  value="submit" ng-show="aki" ng-click="pagina()">Sortiar</button>
+             
+        <table  id="table" class="table">
+            <tr>
+                <th>Cupom</th>        
+                <th>Nome</th>                
+            </tr>
+            <tr ng-repeat="participante in participantes">
+                <td>{{participante.cupom}}</td>
+                <td>{{participante.nome}}</td>
+            </tr>
+        </table>
+                        
     </div>
+       
+    <div id="fundo" ng-show="pg">
+     
+        <div class="box" >
+            <div>
+                <tr> 
+                    <h2 class="titulo"> 3º Prêmio:</h2>
+                    <h3 class="texto">{{terceiro.cupom +" - "+ terceiro.nome}} </h3>
+                    <h2 class="titulo"> 2º Prêmio: </h2 >
+                    <h3 class="texto"> {{segundo.cupom +" - "+ segundo.nome}} </h3>
+                    <h2 class="titulo"> 1º Prêmio:</h2 >   
+                    <h3 class="texto"> {{primeiro.cupom +" - "+ primeiro.nome}} </h3>   
+                </tr>              
+            </div>  
+            
+            <div>        
+                <button class="btn btn-primary btn-block" ng-click="sortear()" > {{contador}}</button>
+                <h1 class="titulo2" ng-show="mostrar">Parabéns:</h1> 
+                <h1 class="texto2" ng-show="mostrar">{{ ganhador.cupom +" - "+ ganhador.nome }}</h1>
+                <h1 class="texto3" ng-show="esconder">{{ fim }}</h1>                      
+             </div>   
+                     
+             
+        </div> 
     
+    </div>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
