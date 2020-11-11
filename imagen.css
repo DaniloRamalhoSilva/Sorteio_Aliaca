@@ -13,7 +13,27 @@
     top: 0;
     background-size: cover;
 }
-
+#fundo2{
+    background-image: url('fundo2.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    bottom: 0;
+    color: black;
+    left: 0;
+    overflow: auto;
+    padding: 3em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    background-size: cover;
+}
+.table {
+    width: 430px;
+    margin-top: 20px;
+    margin-left: 40%;
+    margin-right: auto;           
+}
 
 .box{
     display: flex;            
@@ -22,13 +42,20 @@
 }
 .box div{            
     width:40%;
-    left: 30%;
+   
+    height: 40%;
 }
 .btn{
     width: 50%;
     margin-top: 30%;
     margin-block-end: 3%;
     margin-left: 25%;
+    
+}
+.btnLista{
+    width: 30%;
+    margin-top: 0%;
+    margin-left: 40%;
     
 }
 .titulo{
@@ -69,15 +96,4 @@
     
 }
 
-.h1{
-    width: 50%;
 
-}
-.h2{
-    width: 50%;
-
-}
-.h3{
-    width: 50%;
-
-}
